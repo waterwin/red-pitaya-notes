@@ -25,9 +25,9 @@ TIMESTAMP=`date --utc +'%y%m%d_%H%M'`
 
 echo "Processing ..."
 
-REPORT=report_$TIMESTAMP.txt
+REPORT=report_1_$TIMESTAMP.txt
 
-for file in `find . -name decodes_\*.txt -mmin +1`
+for file in `find . -name decodes_1_\*.txt -mmin +1`
 do
   cat $file >> $REPORT
   rm -f $file
