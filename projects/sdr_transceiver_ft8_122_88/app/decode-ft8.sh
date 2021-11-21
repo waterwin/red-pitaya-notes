@@ -32,16 +32,27 @@ echo "Recording ..."
 killall -q $RECORDER
 $RECORDER $CONFIG
 
-echo "Decoding ..."
+echo "Decoding from IN1 ..."
 
-for file in ft8_*_$TIMESTAMP.c2
+for file in ft8_*_1_$TIMESTAMP.c2
 do
   while [ `pgrep $DECODER | wc -l` -ge $JOBS ]
   do
     sleep 1
   done
   nice -n $NICE $DECODER $file &
-done > decodes_$TIMESTAMP.txt
+done > decodes_1_$TIMESTAMP.txt
+
+echo "Decoding from IN2 ..."
+
+for file in ft8_*_2_$TIMESTAMP.c2
+do
+  while [ `pgrep $DECODER | wc -l` -ge $JOBS ]
+  do
+    sleep 1
+  done
+  nice -n $NICE $DECODER $file &
+done > decodes_2_$TIMESTAMP.txt
 
 wait
 
