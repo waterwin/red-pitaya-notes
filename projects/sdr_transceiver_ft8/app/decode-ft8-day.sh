@@ -34,7 +34,7 @@ $RECORDER $CONFIG
 
 echo "Decoding ..."
 
-if [ -n "$(find /dev/shm -name '*_1_*' | head -1)" ]
+if [ -n "$(find /dev/shm -name '*0_1_*' | head -1)" ]
 then
 	for file in ft8_*_1_$TIMESTAMP.c2
 	do
@@ -46,7 +46,7 @@ then
 	done > decodes-1_$TIMESTAMP.txt
 fi
 
-if [ -n "$(find /dev/shm -name '*_2_*' | head -1)" ]
+if [ -n "$(find /dev/shm -name '*0_2_*' | head -1)" ]
 then
 	for file in ft8_*_2_$TIMESTAMP.c2
 	do
