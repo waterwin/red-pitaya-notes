@@ -1,7 +1,5 @@
 #! /bin/sh
 
-str='IN1IN2'
-
 JOBS=4
 NICE=10
 
@@ -9,7 +7,7 @@ DIR=`readlink -f $0`
 DIR=`dirname $DIR`
 
 RECORDER=$DIR/write-c2-files
-CONFIG=write-c2-files.cfg
+CONFIG=write-c2-files-night.cfg
 
 DECODER=/media/mmcblk0p1/apps/ft8d/ft8d
 ALLMEPT=ALL_FT8.TXT
@@ -36,7 +34,7 @@ $RECORDER $CONFIG
 
 echo "Decoding ..."
 
-if [[ $str == *IN1* ]]
+if [ -n "$(find /dev/shm -name '*_1_*' | head -1)" ]
 then
 	for file in ft8_*_1_$TIMESTAMP.c2
 	do
@@ -48,7 +46,7 @@ then
 	done > decodes-1_$TIMESTAMP.txt
 fi
 
-if [[ $str == *IN2* ]]
+if [ -n "$(find /dev/shm -name '*_2_*' | head -1)" ]
 then
 	for file in ft8_*_2_$TIMESTAMP.c2
 	do
