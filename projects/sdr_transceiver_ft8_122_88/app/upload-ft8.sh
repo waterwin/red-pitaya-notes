@@ -1,11 +1,11 @@
 #! /bin/sh
 
 # CALL and GRID should be specified to enable uploads
-CALL=F4VTQ/3
-GRID=JN28UX
+CALL=
+GRID=
 
 # optional antenna description
-ANTENNA="antenna 1"
+ANTENNA=""
 
 DIR=`readlink -f $0`
 DIR=`dirname $DIR`
@@ -25,9 +25,9 @@ TIMESTAMP=`date --utc +'%y%m%d_%H%M'`
 
 echo "Processing ..."
 
-REPORT=report_1_$TIMESTAMP.txt
+REPORT=report_$TIMESTAMP.txt
 
-for file in `find . -name decodes-1_\*.txt -mmin +1`
+for file in `find . -name decodes_\*.txt -mmin +1`
 do
   cat $file >> $REPORT
   rm -f $file
