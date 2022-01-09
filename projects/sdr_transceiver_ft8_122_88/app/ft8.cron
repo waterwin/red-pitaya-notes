@@ -1,8 +1,8 @@
-#* * * * * cd /dev/shm && /media/mmcblk0p1/apps/sdr_transceiver_ft8/decode-ft8.sh >> decode-ft8.log 2>&1 &
-#*/6 * * * * cd /dev/shm && /media/mmcblk0p1/apps/sdr_transceiver_ft8/upload-ft8.sh >> upload-ft8.log 2>&1 &
+#* * * * * cd /dev/shm && /media/mmcblk0p1/apps/sdr_transceiver_ft8_122_88/decode-ft8.sh >> decode-ft8.log 2>&1 &
+#*/6 * * * * cd /dev/shm && /media/mmcblk0p1/apps/sdr_transceiver_ft8_122_88/upload-ft8.sh >> upload-ft8.log 2>&1 &
 #* * * * * cd /dev/shm && /media/mmcblk0p1/apps/common_tools/update-corr.sh 125 >> update-corr.log 2>&1 &
-* 7-18 * * * cd /dev/shm && /media/mmcblk0p1/apps/sdr_transceiver_ft8/decode-ft8-day.sh >> decode-ft8-day.log 2>&1 &
-* 18-23,0-7 * * * cd /dev/shm && /media/mmcblk0p1/apps/sdr_transceiver_ft8/decode-ft8-night.sh >> decode-ft8-night.log 2>&1 &
-*/6 * * * * cd /dev/shm && /media/mmcblk0p1/apps/sdr_transceiver_ft8/upload-ft8-1.sh >> upload-ft8-1.log 2>&1 &
-*/6 * * * * cd /dev/shm && /media/mmcblk0p1/apps/sdr_transceiver_ft8/upload-ft8-2.sh >> upload-ft8-2.log 2>&1 &
+* 7-18 * * * cd /dev/shm && /media/mmcblk0p1/apps/sdr_transceiver_ft8_122_88/decode-ft8-day.sh >> decode-ft8-day.log 2>&1 &
+* 18-23,0-7 * * * cd /dev/shm && /media/mmcblk0p1/apps/sdr_transceiver_ft8_122_88/decode-ft8-night.sh >> decode-ft8-night.log 2>&1 &
+*/6 * * * * cd /dev/shm && /media/mmcblk0p1/apps/sdr_transceiver_ft8_122_88/upload-ft8-1.sh >> upload-ft8-1.log 2>&1 &
+*/6 * * * * cd /dev/shm && /media/mmcblk0p1/apps/sdr_transceiver_ft8_122_88/upload-ft8-2.sh >> upload-ft8-2.log 2>&1 &
 #* * * * * cd /dev/shm && /media/mmcblk0p1/apps/common_tools/update-corr.sh >> update-corr.log 2>&1 &
